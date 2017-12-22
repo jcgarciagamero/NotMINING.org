@@ -5,20 +5,9 @@ function isMining() {
 
     var detecciones = 0;
 
-    for (actualMiner in array) {
-        for (actualScript in codigoWeb){
-            var codigoInner = "" + codigoWeb[actualScript].innerHTML;
-            var codigoOuter = "" + codigoWeb[actualScript].outerHTML;
+    for (actualScript in codigoWeb){    
+        for (actualMiner in array) {
             var codigoSRC = "" + codigoWeb[actualScript].src;
-
-            var buscadorInner = codigoInner.indexOf(array[actualMiner]);
-            var buscadorOuter = codigoOuter.indexOf(array[actualMiner]);
-
-            var buscadorCodigoJS = -1;
-                
-            if ((buscadorInner != -1) || (buscadorOuter != -1)) {
-                detecciones++;
-            }
 
             if (!codigoSRC == undefined){
                 var oReq = new XMLHttpRequest();
