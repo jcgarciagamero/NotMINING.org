@@ -1,15 +1,18 @@
 ﻿function isMining() {
-    var codigoWeb = document.documentElement.outerHTML;
+    var codigoWeb = document.getElementsByTagName('script');
 
     var array = ["miner.start", "coinhive.min.js", "simple-monero-miner-coin"];
 
     var detecciones = 0;
 
-    for (actual in array) {
-        var buscador = codigoWeb.indexOf(array[actual]);
-        if (buscador != -1) {
-            detecciones++;
-        }
+    for (actualMiner in array) {
+        for (actualScript in codigoWeb)
+            var buscadorInner = codigoWeb[actualScript].innerHTML.indexOf(array[actualMiner]);
+            var buscadorOuter = codigoWeb[actualScript].outerHTML.indexOf(array[actualMiner]);
+                
+            if ((buscadorInner != -1) || (buscadorOuter != -1)) {
+                detecciones++;
+            }
     }
 
     if (detecciones == 0) {
