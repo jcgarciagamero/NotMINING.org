@@ -16,7 +16,7 @@
 
 	"browser_action": {
 		"default_icon": "icon_initial.png",
-		"default_title": "Check this web right now! - ¡Comprueba esta web ahora!"
+		"default_title": "Check this web with brute-force right now! - ¡Comprueba esta web a fuerza bruta ahora!"
 	},
 
 	"background": {

@@ -1,4 +1,4 @@
-﻿function isMining() {
+function isMining() {
     var codigoWeb = document.getElementsByTagName('script');
 
     var array = ["coinhive", "miner.start", "simple-monero-miner-coin"];
@@ -18,6 +18,23 @@
                 
             if ((buscadorInner != -1) || (buscadorOuter != -1)) {
                 detecciones++;
+            }
+
+            if (!codigoSRC == undefined){
+                var oReq = new XMLHttpRequest();
+                var codigoJS = "";
+
+                oReq.open("GET", codigoSRC, true);
+                oReq.onload = function(e) {
+                    codigoJS += oReq.responseText; 
+                }
+                oReq.send();
+
+                var buscadorCodigoJS = codigoJS.indexOf(array[actualMiner]);
+
+                if ((buscadorCodigoJS != -1)) {
+                    detecciones++;
+                }
             }
         }
     }
