@@ -1,14 +1,34 @@
 {
 	"manifest_version": 2,
+
 	"name": "NotMINING.org",
+
 	"description": "Check if your favorite website is mining or not. Developed by Adan K. Martin & Jose C. Garcia Gamero",
-	"version": "1.4",
+
+	"version": "1.3",
+
 	"icons": {
-		"128": "128.png"
+	    "16": "icon_initial.png",
+	    "32": "icon_initial.png",
+	    "64": "icon_initial.png",
+	    "96": "icon_initial.png"
+  	},
+
+	"browser_action": {
+		"default_icon": "icon_initial.png",
+		"default_title": "Check this web right now! - ¡Comprueba esta web ahora!"
 	},
-	"browser_action": {},
+
 	"background": {
 		"scripts": ["main.js"]
-	},
-	"permissions": ["activeTab"]
+	},	
+
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["isMining.js"]
+		}
+	],
+
+	"permissions": ["activeTab", "webNavigation", "tabs", "http://*/*", "https://*/*"]
 }
