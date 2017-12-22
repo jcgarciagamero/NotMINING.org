@@ -6,19 +6,19 @@ function isMining() {
     var detecciones = 0;
 
     for (actualScript in codigoWeb){    
-        for (actualMiner in array) {
-            var codigoSRC = "" + codigoWeb[actualScript].src;
+        var codigoSRC = "" + codigoWeb[actualScript].src;
 
-            if (!codigoSRC == undefined){
-                var oReq = new XMLHttpRequest();
-                var codigoJS = "";
+        if (!codigoSRC == undefined){
+            var oReq = new XMLHttpRequest();
+            var codigoJS = "";
 
-                oReq.open("GET", codigoSRC, true);
-                oReq.onload = function(e) {
-                    codigoJS += oReq.responseText; 
-                }
-                oReq.send();
+            oReq.open("GET", codigoSRC, true);
+            oReq.onload = function(e) {
+                codigoJS += oReq.responseText; 
+            }
+            oReq.send();
 
+            for (actualMiner in array) {
                 var buscadorCodigoJS = codigoJS.indexOf(array[actualMiner]);
 
                 if ((buscadorCodigoJS != -1)) {
