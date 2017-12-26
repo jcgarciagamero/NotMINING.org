@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='https://www.notmining.org/extension/auto-update.xml' protocol='2.0'>
+	<app appid='odomlgbibdfgoclgndddglpfhjkmapkj'>
+		<updatecheck codebase='https://www.notmining.org/extension/NOTminingorg.crx' version='1.2' />
+	</app>
+</gupd>
