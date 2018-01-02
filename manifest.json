@@ -5,13 +5,11 @@
 
 	"description": "Check if your favorite website is mining or not. Developed by Adan K. Martin & Jose C. Garcia Gamero",
 
-	"version": "1.6.8",
+	"version": "1.6.7",
 
 	"icons": {
 	    "128": "128.png"
   	},
-
-  	"default_locale": "en",
 
 	"browser_action": {
 		"default_icon": "128.png",
