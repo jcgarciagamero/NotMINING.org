@@ -1,0 +1,11 @@
+{
+	"positive": {
+		"message": "NotMINING.org\ncryptocurrencyマイニングコードの痕跡が見つかりました。 このページは事前の許可なしにCPUを使用している可能性があります。",
+		"description": "ポジティブな結果が見つかりました"
+	},
+
+	"negative": {
+		"message": "NotMINING.org\ncryptocurrencyマイニングコードの痕跡が見つかりませんでした。 このウェブサイトで安全にサーフィンすることができます。",
+		"description": "トレースは（おそらく）見つからなかった"
+	}
+}

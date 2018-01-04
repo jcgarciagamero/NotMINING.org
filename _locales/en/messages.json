@@ -1,0 +1,11 @@
+{
+	"positive": {
+		"message": "NotMINING.org\nThere is a trace of cryptominers in this webpage. Maybe this site is using your CPU power without your consent.",
+		"description": "Positive result in this place"
+	},
+
+	"negative": {
+		"message": "NotMINING.org\nThere is not trace of cryptominers in this webpage. You are safe in this place.",
+		"description": "This is site is clean (allegedly)"
+	}
+}
